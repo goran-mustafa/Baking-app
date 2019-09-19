@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".StepActivity">
+    <FrameLayout
+        android:id="@+id/player_container"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="7"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+
+        android:layout_height="match_parent">
+        <com.google.android.material.button.MaterialButton
+            android:theme="@style/Theme.MaterialComponents.Light"
+           app:icon="@drawable/pre"
+            android:onClick="pre"
+            android:text=""
+            android:layout_weight="1"
+            android:id="@+id/btn_previous_step"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:layout_marginLeft="2dp"
+            android:onClick="next"
+            android:text=""
+            android:layout_weight="1"
+            app:icon="@drawable/forward"
+            android:id="@+id/btn_next_step"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
