@@ -28,10 +28,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 public class MainActivity extends AppCompatActivity {
-
+    public static boolean loaded=false;
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter adapter;
+    public  static ArrayList<Food> sfood;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 adapter=new FoodAdapter(getApplicationContext(),foods1);
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
+                sfood=foods1;
+                loaded=true;
             }
 
             @Override
